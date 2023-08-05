@@ -24,9 +24,14 @@ function CustomItemContext(props){
         setItem(item-1);
     }
 
+    function handleClear(){
+        setItem(0);
+        setTotal(0);
+    }
+
     return(
         <>
-            <itemContext.Provider value={{handleAdd,handleRemove,total,item}}>
+            <itemContext.Provider value={{handleAdd,handleRemove,total,item,handleClear}}>
                 {props.children}
             </itemContext.Provider>
         </>
